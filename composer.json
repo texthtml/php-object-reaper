@@ -1,0 +1,31 @@
+{
+    "name": "texthtml/object-reaper",
+    "description": "Be notified of objects being destroyed",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TH\\ObjectReaper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mathieu Rochette",
+            "email": "mathieu@texthtml.net"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "slevomat/coding-standard": "^8.0",
+        "phpstan/phpstan": "^1.12",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "texthtml/doctest": "^0.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    }
+}
