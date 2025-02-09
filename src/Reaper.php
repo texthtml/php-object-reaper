@@ -7,7 +7,30 @@ final class Reaper
     /** @var \WeakMap<object,list<self>> */
     private static \WeakMap $dd;
 
-    private function __construct(private readonly \Closure $callback) {}
+    private bool $active = true;
+
+    private function __construct(
+        /** @var \Closure(): void */
+        private readonly \Closure $callback,
+    ) {}
+
+    /**
+     * Detach the reaper from its target
+     *
+     * ```php
+     * $a = (object) [];
+     *
+     * $reaper = Reaper::watch($a, function () { echo "Good Bye"; });
+     * $reaper->forget();
+     *
+     * unset($b);
+     * // prints nothing
+     * ```
+     */
+    public function forget(): void
+    {
+        $this->active = false;
+    }
 
     /**
      * Attach a callback to an object to be called when that object is destroyed.
@@ -52,16 +75,22 @@ final class Reaper
      *
      * @param callable(): void $callback
      */
-    public static function watch(object $subject, callable $callback): void {
+    public static function watch(object $subject, callable $callback): self
+    {
         self::$dd ??= new \WeakMap();
 
         self::$dd[$subject] ??= [];
 
-        self::$dd[$subject][] = new self(\Closure::fromCallable($callback));
+        return self::$dd[$subject][] = new self(\Closure::fromCallable($callback));
     }
 
     /** @nodoc */
-    public function __destruct() {
+    public function __destruct()
+    {
+        if (!$this->active) {
+            return;
+        }
+
         ($this->callback)();
     }
 }
