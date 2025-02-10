@@ -20,7 +20,7 @@
         "phpstan/phpstan": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-strict-rules": "^2.0",
-        "texthtml/doctest": "^0.2"
+        "texthtml/doctest": "^0.3"
     },
     "config": {
         "allow-plugins": {
