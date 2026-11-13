@@ -8,7 +8,7 @@ Let you register callbacks that will be called when objects are destroyed.
 composer req texthtml/object-reaper
 ```
 
-Requires PHP 8.1+.
+Requires PHP 8.2+.
 
 # Usage
 
