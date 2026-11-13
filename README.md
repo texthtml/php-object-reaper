@@ -1,5 +1,11 @@
 # Object Reaper: here for your objects when they pass away
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/texthtml/object-reaper?logo=packagist)](https://packagist.org/packages/texthtml/object-reaper)
+[![Supported PHP Versions](https://img.shields.io/packagist/dependency-v/texthtml/object-reaper/php?logo=php&color=777bb4)](https://packagist.org/packages/texthtml/object-reaper)
+[![License](https://img.shields.io/packagist/l/texthtml/object-reaper)](LICENSE)
+[![Tests](https://github.com/texthtml/php-object-reaper/actions/workflows/test.yml/badge.svg)](https://github.com/texthtml/php-object-reaper/actions/workflows/test.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/texthtml/php-object-reaper?logo=codecov)](https://codecov.io/gh/texthtml/php-object-reaper)
+
 Let you register callbacks that will be called when objects are destroyed.
 
 # Installation
