@@ -23,7 +23,7 @@ final class Reaper
      * $reaper = Reaper::watch($a, function () { echo "Good Bye"; });
      * $reaper->forget();
      *
-     * unset($b);
+     * unset($a);
      * // prints nothing
      * ```
      */
