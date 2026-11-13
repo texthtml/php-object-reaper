@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- `composer.json` now declares `"php": "^8.2"` (readonly properties + constructor promotion).
+- `composer.json` now declares `"php": "^8.2"` (readonly properties + constructor promotion), with `config.platform.php` pinned to `8.2.0`.
+- `composer.lock` is now committed (removed from `.gitignore`, still `export-ignore`ed so it stays out of dist archives).
 - CI test matrix now runs PHP 8.2 to 8.5 (dropped 8.1, added 8.5).
 
 ### Added
