@@ -18,5 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- PHPUnit test suite (run in CI on every supported PHP version) — covers watching, forgetting, callback ordering and invokable-object callbacks.
+- Codecov integration: dedicated coverage job on PHP 8.5 uploads a clover report to Codecov.
 - `CHANGELOG.md` (this file).
 - README sections for detaching callbacks and registering multiple callbacks.
