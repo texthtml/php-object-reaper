@@ -3,6 +3,9 @@
     "description": "Be notified of objects being destroyed",
     "type": "library",
     "license": "MIT",
+    "require": {
+        "php": "^8.1"
+    },
     "autoload": {
         "psr-4": {
             "TH\\ObjectReaper\\": "src/"
