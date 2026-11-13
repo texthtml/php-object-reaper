@@ -28,7 +28,7 @@
         "phpstan/phpstan": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-strict-rules": "^2.0",
-        "phpunit/phpunit": "^10.5",
+        "phpunit/phpunit": "^13.0",
         "texthtml/doctest": "^0.3"
     },
     "config": {
