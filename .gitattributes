@@ -2,6 +2,7 @@
 /.docker export-ignore
 /.github export-ignore
 /composer.lock export-ignore
+/composer.lock export-ignore
 /phpcs.xml.dist export-ignore
 /phpstan.neon.dist export-ignore
 /phpunit.xml.dist export-ignore

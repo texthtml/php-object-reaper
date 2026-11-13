@@ -32,6 +32,9 @@
         "texthtml/doctest": "^0.3"
     },
     "config": {
+        "platform": {
+            "php": "8.2.0"
+        },
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true
