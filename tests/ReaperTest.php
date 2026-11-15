@@ -65,7 +65,9 @@ final class ReaperTest extends TestCase
         $called = false;
 
         $listener = new class($called) {
-            public function __construct(private bool &$called) {}
+            public function __construct(
+                private bool &$called,
+            ) {}
 
             public function __invoke(): void
             {
