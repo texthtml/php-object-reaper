@@ -48,11 +48,14 @@ jobs:
       - name: Run unit tests
         run: vendor/bin/phpunit --coverage-clover=coverage.xml
 
-      - name: Run linter
-        run: vendor/bin/phpcs -ps
+      - name: Check formatting (Mago)
+        run: vendor/bin/mago fmt --check
 
-      - name: Run static analysis (PHPStan)
-        run: vendor/bin/phpstan
+      - name: Run linter (Mago)
+        run: vendor/bin/mago lint
+
+      - name: Run static analysis (Mago)
+        run: vendor/bin/mago analyze
 
   coverage:
 

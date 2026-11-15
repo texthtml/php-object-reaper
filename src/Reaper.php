@@ -79,9 +79,15 @@ final class Reaper
     {
         self::$dd ??= new \WeakMap();
 
-        self::$dd[$subject] ??= [];
+        $reaper = new self(\Closure::fromCallable($callback));
 
-        return self::$dd[$subject][] = new self(\Closure::fromCallable($callback));
+        /** @var list<self> $reapers */
+        $reapers = self::$dd[$subject] ?? [];
+        $reapers[] = $reaper;
+
+        self::$dd[$subject] = $reapers;
+
+        return $reaper;
     }
 
     /** @nodoc */

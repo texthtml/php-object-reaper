@@ -1,0 +1,25 @@
+php-version = "8.2.0"
+
+[source]
+paths = ["src", "tests"]
+includes = ["vendor"]
+excludes = ["vendor/**/tests/**"]
+
+[formatter]
+combine-opening-tag-and-declare = true
+
+[analyzer]
+excludes = ["tests"]
+minimum-fail-level = "warning"
+find-unused-parameters = true
+find-overly-wide-return-types = true
+check-throws = true
+check-dead-catch = true
+check-missing-type-hints = true
+check-closure-missing-type-hints = true
+check-arrow-function-missing-type-hints = true
+check-missing-override = true
+check-property-initialization = true
+check-use-statements = true
+strict-list-index-checks = true
+strict-array-index-existence = true
